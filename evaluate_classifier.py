@@ -36,7 +36,7 @@ model = modelEFDT
 for idx, x in enumerate(x):
     print(x, y[idx])
 
-    # Test Than Train
+    # Test Then Train
     # Test
     y_pred = model.predict_one(x)
     # Train
