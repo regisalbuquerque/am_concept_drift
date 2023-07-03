@@ -14,7 +14,9 @@ Conceitos a ser abordado
 
 DATASETS (4 artificiais e 2 reais)
 - [SEA](./artificial/sea), 50k instancias, 3 atributos (2 relevantes), classificação binária, deslocamento abrupto
-- +3 Datasets Artificiais (Abrupto e Gradual) **to do**
+- Chessboard
+- Moving Squares
+- Moving RBF
 - Weather (real / original source)
 - Poker Hand (real / original source)
 
@@ -33,6 +35,7 @@ Avaliar métricas em classificadores disponíveis:
 - ARFClassifier
 - LeveragingBaggingClassifier
 - KNNClassifier
+- SA
 
 Expectativa de realizar 24 Testes (6 bases X 4 algoritmos)
 
