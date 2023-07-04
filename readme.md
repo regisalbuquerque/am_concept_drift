@@ -28,6 +28,13 @@ Análise das Bases
 |:--:| 
 | **Fig 1:** *Concept drift in sea database* |
 
+| ![movingSquares.gif](images/movingSquares.gif) | 
+|:--:| 
+| **Fig 2:** *Concept drift in movingSquares database* |
+
+| ![chess.gif](images/chess.gif) | 
+|:--:| 
+| **Fig 2:** *Concept drift in chess database* |
 
 
 Avaliar métricas em classificadores disponíveis: 
