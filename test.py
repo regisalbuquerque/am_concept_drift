@@ -3,11 +3,15 @@ from river import stream
 import pandas as pd
 import csv
 
-dataset = datasets.Phishing()
-dataset
+params = {
+    'converters': {'x': float, 'y': float, 'z': float},
+    'target': 'labels'
+}
 
-for x, y in dataset:
-    pass
+dataset = stream.iter_csv("artificial/sea/sea.csv", **params)
+
+# for x, y in dataset:
+#     pass
 
 x, y = next(iter(dataset))
 print(x)
@@ -15,20 +19,33 @@ print(type(x))
 print(y)
 print(type(y))
 
+
+# dataset = datasets.Phishing()
+# dataset
+
+# for x, y in dataset:
+#     pass
+
+# x, y = next(iter(dataset))
+# print(x)
+# print(type(x))
+# print(y)
+# print(type(y))
+
 # X extract
-df_x = pd.read_csv('artificial/sea/SEA_training_data.csv', header=None)
-x = df_x.to_dict('records')
+# df_x = pd.read_csv('artificial/sea/SEA_training_data.csv', header=None)
+# x = df_x.to_dict('records')
 
 # y extract
-df = pd.read_csv('artificial/sea/SEA_training_class.csv', header=None)
-y = df[0].tolist()
+# df = pd.read_csv('artificial/sea/SEA_training_class.csv', header=None)
+# y = df[0].tolist()
 
-for idx, x in enumerate(x):
-    print(x)
-    print(type(x))
-    print(y[idx])
-    print(type(y[idx]))
-    break
+# for idx, x in enumerate(x):
+#     print(x)
+#     print(type(x))
+#     print(y[idx])
+#     print(type(y[idx]))
+#     break
 
 
 #df_x = pd.read_csv('artificial/sea/SEA_training_data.csv', header=None)
