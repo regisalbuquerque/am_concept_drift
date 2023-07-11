@@ -8,7 +8,10 @@ algos = {
                                                      linear_model.LogisticRegression()),
     'tree': tree.ExtremelyFastDecisionTreeClassifier(),
     'forest': forest.ARFClassifier(),
-    'neighbors': neighbors.KNNClassifier
+    'neighbors': (
+    preprocessing.StandardScaler() |
+    neighbors.KNNClassifier()
+)
 }
 
 bases = {
