@@ -131,6 +131,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# This project
+# this project
 results/*.csv
-results/chess.csv
