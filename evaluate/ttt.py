@@ -1,4 +1,5 @@
 import csv
+import copy
 from datetime import datetime
 from river import metrics
 
@@ -62,15 +63,19 @@ class TestThenTrain:
             except:
                 print('Result file can\'t be opened')
 
+            # Init Classifiers
+            models = {}
+            for mod in algos:
+                models[mod] = copy.deepcopy(algos[mod])
+
             for i, _x in enumerate(x):
                 for mod in algos:
-                    model = algos[mod]
 
                     # Test Then Train
                     # Test
-                    result[mod]['y_pred'] = algos[mod].predict_one(_x)
+                    result[mod]['y_pred'] = models[mod].predict_one(_x)
                     # Train
-                    algos[mod].learn_one(_x, y[i])
+                    models[mod].learn_one(_x, y[i])
 
                     if result[mod]['y_pred'] is not None:
                         a = [i, mod]
